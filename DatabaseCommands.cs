@@ -8,23 +8,6 @@ namespace C_
     {
         
         
-        public void conectionDatabase() {
-            string cs = @"server=localhost;userid=root;password=root;database=Projetos;sslmode=none"; 
-            using var con = new MySqlConnection(cs); 
-            con.Open(); 
-
-            try
-            {
-                Console.WriteLine("Conectando com o banco de dados.\n"); 
-            } catch (Exception e) {
-                Console.WriteLine("ERRO: ", e.Message); 
-            } finally {
-                con.Close(); 
-            }
-                
-        }
-
-        
         public void setUserDatabase(string user, string password) {
             MySqlConnection myConnection = new MySqlConnection("server=localhost;port=3306;database=Projetos;user id=root;pwd=root;sslmode=none;");
             string myInsertQuery = "INSERT INTO crud_USER (usuario, senha) Values('"+user+"', '"+password+"')"; 

@@ -14,7 +14,6 @@ namespace C_
                 op = byte.Parse(Console.ReadLine());
 
                 DatabaseCommands dc = new DatabaseCommands();
-                dc.conectionDatabase();
 
 
                 switch (op)
